@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087471">
+    <meta name="description" content="Prueba el simulador de ahorro de FINLAB+: ahorro inicial, aportaciones mensuales y desglose por mes, sin registro.">
+    <title>Simuladores — FINLAB+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+  </head>
+  <body data-page="simuladores">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="../index.html" aria-label="FINLAB+, inicio">FINLAB<span>+</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion-principal" hidden><span>Menú</span><span class="menu-symbol" aria-hidden="true"></span></button>
+        <nav class="main-nav" id="navegacion-principal" aria-label="Navegación principal">
+          <a href="../index.html">Inicio</a>
+          <a href="../pages/finanzas-personales.html">Finanzas personales</a>
+          <a href="../pages/ahorro-presupuesto.html">Ahorro y presupuesto</a>
+          <a href="../pages/credito-tarjetas.html">Crédito y tarjetas</a>
+          <a href="../pages/intereses-inversion.html">Intereses e inversión</a>
+          <a href="../pages/seguridad-financiera.html">Seguridad financiera</a>
+          <a href="../pages/simuladores.html" aria-current="page">Simuladores</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" tabindex="-1">
+  <header class="lesson-hero"><div class="container"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span>Simuladores</span></nav><p class="eyebrow">06 / SIMULADORES</p><h1>Un espacio para<br>practicar con números.</h1><p class="lesson-intro">Cambia los importes y el plazo para explorar un ejemplo de ahorro. Los cálculos se realizan en tu navegador, sin enviar ni guardar tus datos.</p><div class="lesson-meta"><span>Herramienta interactiva</span><a href="#simulador">Ir al simulador <span aria-hidden="true">↓</span></a></div></div></header>
+  <div class="container simulator-page">
+    <section id="simulador" aria-labelledby="simulator-title">
+      <div class="simulator-introduction"><h2 id="simulator-title">Simulador de ahorro</h2><p>Elige cuánto tienes, cuánto aportarás cada mes y durante cuántos meses. El resultado se actualiza al cambiar los valores.</p></div>
+      <div class="simulator-workspace">
+        <form id="savings-form" class="savings-form" aria-labelledby="form-title"><h3 id="form-title">Configura tu ejemplo</h3><p class="form-description">Todas las cantidades están en pesos mexicanos (MXN).</p><noscript><p class="noscript-note">Activa JavaScript para cambiar los valores. El ejemplo muestra $1,000 al mes durante 6 meses: $6,000 en total.</p></noscript>
+          <fieldset id="simulator-fields" disabled><legend class="sr-only">Importes y plazo de ahorro</legend>
+            <div class="amount-fields"><div class="form-field"><label for="initial-savings">Ahorro inicial</label><div class="money-input"><span aria-hidden="true">$</span><input id="initial-savings" name="initialSavings" type="number" inputmode="decimal" min="0" max="1000000" step="0.01" value="0" required aria-describedby="amount-hint"></div></div><div class="form-field"><label for="monthly-savings">Aportación mensual</label><div class="money-input"><span aria-hidden="true">$</span><input id="monthly-savings" name="monthlySavings" type="number" inputmode="decimal" min="0" max="1000000" step="0.01" value="1000" required aria-describedby="amount-hint"></div></div></div>
+            <p class="input-hint" id="amount-hint">De $0 a $1,000,000 por importe; hasta dos decimales.</p>
+            <div class="form-field months-field"><div class="range-label"><label for="savings-months">Plazo de ahorro</label><output id="months-label" for="savings-months" aria-live="off">6 meses</output></div><input id="savings-months" name="months" type="range" min="1" max="60" step="1" value="6" aria-valuetext="6 meses"><div class="range-limits" aria-hidden="true"><span>1 mes</span><span>60 meses</span></div></div>
+            <div class="form-actions"><button class="button button-primary" type="submit">Calcular ahorro <span aria-hidden="true">↗</span></button><button class="reset-button" type="reset">Restablecer ejemplo</button></div>
+          </fieldset>
+        </form>
+        <div class="savings-result" aria-labelledby="result-title"><div class="result-topline"><h3 id="result-title">TU AHORRO ACUMULADO</h3><span>MXN</span></div><output class="result-amount" id="savings-total" for="initial-savings monthly-savings savings-months" aria-live="off">$6,000</output><p class="result-period" id="result-period">al terminar 6 meses</p><div class="result-composition" aria-hidden="true"><span id="initial-segment"></span><span id="contributions-segment"></span></div><dl class="result-breakdown"><div><dt><span class="legend-swatch initial-swatch" aria-hidden="true"></span>Ahorro inicial</dt><dd id="initial-total">$0</dd></div><div><dt><span class="legend-swatch contribution-swatch" aria-hidden="true"></span>Aportaciones del periodo</dt><dd id="contributions-total">$6,000</dd></div></dl><p class="result-note">Ejercicio sin rendimientos, inflación ni comisiones. Se mantienen la misma aportación mensual y el plazo elegido.</p></div>
+      </div>
+      <div class="simulator-footnote"><p>Ahorro inicial + (aportación mensual × meses)</p><p>Ejemplo educativo. No representa una inversión.</p></div>
+      <p class="sr-only" id="calculation-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <details class="projection-details"><summary>Ver el desglose por mes <span aria-hidden="true">+</span></summary><div class="table-wrap" role="region" aria-label="Desglose mensual del ahorro" tabindex="0"><table class="data-table"><caption>Ahorro acumulado al finalizar cada mes; cantidades en MXN.</caption><thead><tr><th scope="col">Periodo</th><th scope="col">Aportación</th><th scope="col">Acumulado</th></tr></thead><tbody id="projection-body"><tr><th scope="row">Mes 1</th><td>$1,000</td><td>$1,000</td></tr><tr><th scope="row">Mes 2</th><td>$1,000</td><td>$2,000</td></tr><tr><th scope="row">Mes 3</th><td>$1,000</td><td>$3,000</td></tr><tr><th scope="row">Mes 4</th><td>$1,000</td><td>$4,000</td></tr><tr><th scope="row">Mes 5</th><td>$1,000</td><td>$5,000</td></tr><tr><th scope="row">Mes 6</th><td>$1,000</td><td>$6,000</td></tr></tbody></table></div></details>
+      <div class="simulator-explanation"><div><h3>Cómo leer el resultado</h3><p>Si comienzas con $500 y aportas $250 cada mes durante 4 meses, sumas $1,000 en nuevas aportaciones. Al añadir el ahorro inicial, el total es $1,500. Este ejemplo fue elaborado para FINLAB+.</p></div><div class="callout"><h3>Qué supone el ejercicio</h3><p>El ahorro inicial está disponible desde el comienzo y cada aportación se agrega al finalizar el mes. No hay retiros. El cálculo muestra pesos acumulados, sin ajustar su poder de compra.</p></div></div>
+    </section>
+    <section class="future-simulators" aria-labelledby="future-title"><p class="section-kicker">PARA CONTINUAR PRACTICANDO</p><h2 id="future-title">Más simuladores</h2><p>Las próximas herramientas se incorporarán a esta sección. Mientras tanto, puedes consultar los conceptos de <a class="inline-link" href="ahorro-presupuesto.html">ahorro y presupuesto</a> y de <a class="inline-link" href="intereses-inversion.html">intereses e inversión</a>.</p></section>
+    <section class="references simulator-references" id="referencias" aria-labelledby="references-title"><p class="section-kicker">CONTEXTO EDUCATIVO</p><h2 id="references-title">Referencias oficiales</h2><ol class="reference-list"><li><a href="https://webappsos.condusef.gob.mx/EducaTuCartera/ahorro.html" target="_blank" rel="noopener noreferrer">CONDUSEF · Ahorro<span class="sr-only"> (abre en otra pestaña)</span></a><p>Metas y aportaciones periódicas. La fórmula y los ejemplos del simulador son ejercicios aritméticos propios de FINLAB+.</p></li><li><a href="https://educa.banxico.org.mx/yo-y-el-dinero/" target="_blank" rel="noopener noreferrer">Banco de México · Yo y el dinero<span class="sr-only"> (abre en otra pestaña)</span></a><p>Contexto introductorio sobre el ahorro y la organización del dinero.</p></li></ol></section>
+    <nav class="lesson-pagination" aria-label="Continuar aprendiendo"><a href="seguridad-financiera.html"><span>← Tema anterior</span><strong>Seguridad financiera</strong></a><a href="../index.html"><span>Volver a</span><strong>Inicio →</strong></a></nav>
+  </div>
+</main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div><a class="wordmark footer-wordmark" href="../index.html" aria-label="FINLAB+, volver al inicio">FINLAB<span>+</span></a><p>Educación financiera gratuita para jóvenes.<br>Un proyecto de Servicio Social universitario.</p></div>
+          <nav class="footer-nav" aria-label="Navegación del pie de página"><a href="../index.html">Inicio</a><a href="../pages/finanzas-personales.html">Finanzas personales</a><a href="../pages/ahorro-presupuesto.html">Ahorro y presupuesto</a><a href="../pages/credito-tarjetas.html">Crédito y tarjetas</a><a href="../pages/intereses-inversion.html">Intereses e inversión</a><a href="../pages/seguridad-financiera.html">Seguridad financiera</a><a href="../pages/simuladores.html">Simuladores</a></nav>
+        </div>
+        <div class="footer-bottom"><p>© 2026 FINLAB+ · Aprendizaje de acceso libre.</p><a href="#contenido">Volver al inicio de la página <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </footer>
+  </body>
+</html>

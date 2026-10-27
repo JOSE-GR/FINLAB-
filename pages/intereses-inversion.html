@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#087471">
+    <meta name="description" content="Comprende el interés simple y compuesto, la inflación y las diferencias entre ahorrar e invertir.">
+    <title>Intereses e inversión — FINLAB+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+  </head>
+  <body data-page="intereses-inversion">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="../index.html" aria-label="FINLAB+, inicio">FINLAB<span>+</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion-principal" hidden><span>Menú</span><span class="menu-symbol" aria-hidden="true"></span></button>
+        <nav class="main-nav" id="navegacion-principal" aria-label="Navegación principal">
+          <a href="../index.html">Inicio</a>
+          <a href="../pages/finanzas-personales.html">Finanzas personales</a>
+          <a href="../pages/ahorro-presupuesto.html">Ahorro y presupuesto</a>
+          <a href="../pages/credito-tarjetas.html">Crédito y tarjetas</a>
+          <a href="../pages/intereses-inversion.html" aria-current="page">Intereses e inversión</a>
+          <a href="../pages/seguridad-financiera.html">Seguridad financiera</a>
+          <a href="../pages/simuladores.html">Simuladores</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" tabindex="-1" class="lesson-main">
+  <header class="lesson-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span>Intereses e inversión</span></nav>
+      <p class="eyebrow">04 / INTERESES E INVERSIÓN</p>
+      <h1>Intereses e inversión</h1>
+      <p class="lesson-intro">El interés, los cambios de precios y el plazo influyen en el dinero que recibes o pagas. Comprender estas diferencias permite leer un ejemplo de inversión con mayor claridad.</p>
+      <div class="lesson-meta"><span>Conceptos básicos</span><a href="#conceptos">Explorar el tema <span aria-hidden="true">↓</span></a></div>
+    </div>
+  </header>
+  <div class="container lesson-layout">
+    <aside class="lesson-sidebar">
+      <p>EN ESTA PÁGINA</p>
+      <nav aria-label="Índice del tema"><a href="#conceptos">Conceptos clave</a><a href="#interes">Dos formas de calcular</a><a href="#ejemplo">Ejemplo práctico</a><a href="#inflacion">Inflación</a><a href="#ahorrar-invertir">Ahorrar e invertir</a><a href="#resumen">Resumen</a><a href="#referencias">Referencias</a></nav>
+      <a class="sidebar-home" href="../index.html">← Volver al inicio</a>
+    </aside>
+    <article class="lesson-content" aria-label="Introducción a los intereses y la inversión">
+      <section id="conceptos">
+        <p class="section-kicker">01 / CONCEPTOS CLAVE</p>
+        <h2>Lo que conviene distinguir.</h2>
+        <dl class="concept-grid">
+          <div><dt>Capital</dt><dd>El monto de dinero con el que comienza una inversión o un cálculo.</dd></div>
+          <div><dt>Tasa de interés</dt><dd>Porcentaje utilizado para calcular el interés durante un periodo determinado.</dd></div>
+          <div><dt>Plazo</dt><dd>Tiempo durante el cual se mantiene el dinero en una inversión.</dd></div>
+          <div><dt>Rendimiento</dt><dd>Ganancia que puede obtenerse de una inversión, según sus condiciones y resultados.</dd></div>
+        </dl>
+      </section>
+      <section id="interes">
+        <p class="section-kicker">02 / EL INTERÉS</p>
+        <h2>Una tasa necesita un periodo.</h2>
+        <p>El interés es una cantidad que puede cobrarse por prestar dinero o recibirse por depositarlo o invertirlo, según el producto. La tasa expresa esa relación en porcentaje: una tasa anual corresponde a un año; una mensual, a un mes. No representan el mismo costo o rendimiento.</p>
+        <div class="comparison-grid">
+          <section><h3>Interés simple</h3><p>Se calcula siempre sobre el capital inicial. Con una tasa y un periodo iguales, cada periodo produce la misma cantidad de interés.</p></section>
+          <section><h3>Interés compuesto</h3><p>Los intereses se incorporan al capital. En el siguiente periodo, el cálculo también incluye los intereses acumulados. A esta incorporación se le llama capitalización.</p></section>
+        </div>
+      </section>
+      <section id="ejemplo" class="example-panel">
+        <p class="example-label">EJEMPLO HIPOTÉTICO / ELABORADO PARA FINLAB+</p>
+        <h2>Los mismos $1,000, dos cálculos.</h2>
+        <p>Supongamos un capital de $1,000 y una tasa fija de 10% anual durante dos años. En el caso compuesto, los intereses se reinvierten al terminar cada año. No hay nuevas aportaciones ni retiros.</p>
+        <div class="table-wrap" role="region" aria-label="Tabla de consulta" tabindex="0">
+          <table class="data-table">
+            <caption>Capital más intereses acumulados; importes en pesos mexicanos.</caption>
+            <thead><tr><th scope="col">Momento</th><th scope="col">Simple</th><th scope="col">Compuesto</th></tr></thead>
+            <tbody><tr><th scope="row">Inicio</th><td>$1,000</td><td>$1,000</td></tr><tr><th scope="row">Fin del año 1</th><td>$1,100</td><td>$1,100</td></tr><tr><th scope="row">Fin del año 2</th><td>$1,200</td><td>$1,210</td></tr></tbody>
+          </table>
+        </div>
+        <p>En el segundo año, el interés simple suma otros $100. El compuesto genera $110, porque se calcula sobre $1,100.</p>
+        <p class="callout">La tasa es únicamente ilustrativa: no describe un producto ni promete ganancias. El ejercicio excluye impuestos, comisiones e inflación.</p>
+      </section>
+      <section id="inflacion">
+        <p class="section-kicker">03 / PODER DE COMPRA</p>
+        <h2>Una cantidad no siempre compra lo mismo.</h2>
+        <p>La inflación es el aumento generalizado y persistente de los precios de bienes y servicios. Si los precios suben, una misma cantidad de dinero alcanza para comprar menos. El cambio de precio de un solo producto no basta para describir la inflación de toda la economía.</p>
+        <p>Por eso, recibir más pesos no necesariamente significa poder comprar más: también importa cómo cambiaron los precios durante ese tiempo.</p>
+      </section>
+      <section id="ahorrar-invertir">
+        <p class="section-kicker">04 / DIFERENCIAS BÁSICAS</p>
+        <h2>Ahorrar e invertir cumplen funciones distintas.</h2>
+        <div class="comparison-grid">
+          <section><h3>Ahorrar</h3><p>Consiste en separar parte del dinero para usarlo después. Puede destinarse a una meta cercana o a atender un imprevisto.</p></section>
+          <section><h3>Invertir</h3><p>Consiste en destinar recursos a un instrumento buscando un rendimiento. Sus resultados dependen del producto, el plazo y el riesgo asumido.</p></section>
+        </div>
+        <p>Antes de invertir, identifica cuándo necesitarás el dinero y qué pérdidas podrías asumir. La liquidez indica qué tan fácil es disponer de los recursos. El riesgo implica incertidumbre y posibilidad de pérdida: asumir más riesgo no garantiza una ganancia mayor.</p>
+      </section>
+      <section id="resumen" class="summary-box">
+        <p class="section-kicker">PARA RECORDAR</p>
+        <h2>Lee la tasa junto con sus condiciones.</h2>
+        <ul class="summary-list"><li>Distingue capital, tasa y periodo del cálculo.</li><li>El interés compuesto requiere incorporar los intereses al capital.</li><li>La inflación modifica el poder de compra.</li><li>Compara plazo, riesgo, liquidez y costos antes de invertir.</li></ul>
+      </section>
+      <section id="referencias" class="references">
+        <p class="section-kicker">FUENTES DEL CONTENIDO</p>
+        <h2>Referencias oficiales.</h2>
+        <ol class="reference-list">
+          <li><a href="https://educa.banxico.org.mx/yo-y-la-economia/el-dinero/5/el-precio-del-dinero.html" target="_blank" rel="noopener noreferrer">Banco de México · El precio del dinero<span class="sr-only"> (abre en otra pestaña)</span></a><p>Interés y uso del dinero a través del tiempo.</p></li>
+          <li><a href="https://revista.condusef.gob.mx/inversion/2022/06/interes-compuesto/" target="_blank" rel="noopener noreferrer">CONDUSEF · Interés compuesto<span class="sr-only"> (abre en otra pestaña)</span></a><p>Capitalización e interés simple y compuesto.</p></li>
+          <li><a href="https://www.banxico.org.mx/footer-es/preguntas-frecuentes-dudas-ba.html" target="_blank" rel="noopener noreferrer">Banco de México · Preguntas frecuentes: inflación<span class="sr-only"> (abre en otra pestaña)</span></a><p>Inflación y efectos sobre el poder adquisitivo.</p></li>
+          <li><a href="https://educa.banxico.org.mx/recursos/pdf/%7B535E8882-4F39-03BC-4410-541F2D4BE0C3%7D.pdf" target="_blank" rel="noopener noreferrer">Banco de México · Ahorro o inversión (PDF)<span class="sr-only"> (abre en otra pestaña)</span></a><p>Propósitos del ahorro y la inversión.</p></li>
+          <li><a href="https://webappsos.condusef.gob.mx/EducaTuCartera/inversion.html" target="_blank" rel="noopener noreferrer">CONDUSEF · Inversión<span class="sr-only"> (abre en otra pestaña)</span></a><p>Capital, rendimiento, plazo, riesgo y liquidez.</p></li>
+        </ol>
+      </section>
+      <nav class="lesson-pagination" aria-label="Continuar entre temas"><a href="credito-tarjetas.html"><span>← Tema anterior</span><strong>Crédito y tarjetas</strong></a><a href="seguridad-financiera.html"><span>Siguiente tema →</span><strong>Seguridad financiera</strong></a></nav>
+    </article>
+  </div>
+</main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div><a class="wordmark footer-wordmark" href="../index.html" aria-label="FINLAB+, volver al inicio">FINLAB<span>+</span></a><p>Educación financiera gratuita para jóvenes.<br>Un proyecto de Servicio Social universitario.</p></div>
+          <nav class="footer-nav" aria-label="Navegación del pie de página"><a href="../index.html">Inicio</a><a href="../pages/finanzas-personales.html">Finanzas personales</a><a href="../pages/ahorro-presupuesto.html">Ahorro y presupuesto</a><a href="../pages/credito-tarjetas.html">Crédito y tarjetas</a><a href="../pages/intereses-inversion.html">Intereses e inversión</a><a href="../pages/seguridad-financiera.html">Seguridad financiera</a><a href="../pages/simuladores.html">Simuladores</a></nav>
+        </div>
+        <div class="footer-bottom"><p>© 2026 FINLAB+ · Aprendizaje de acceso libre.</p><a href="#contenido">Volver al inicio de la página <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </footer>
+  </body>
+</html>
